@@ -1,0 +1,24 @@
+# robots.txt — DraftSignal Digital (https://draftsignaldigital.com/)
+# DraftSignal Digital wants to be found — by search engines and by the AI
+# tools buyers use to build shortlists. All crawlers are welcome.
+
+User-agent: *
+Allow: /
+
+# AI crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://draftsignaldigital.com/sitemap.xml
