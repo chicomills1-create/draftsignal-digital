@@ -571,3 +571,22 @@ button[type=submit]{cursor:pointer;width:100%}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important}
 }
+
+/* FAQ answer blocks (2026-11-01, AEO build — director/ChatGPT adopted copy) */
+.faq{margin-top:28px;border-top:1px solid var(--edge)}
+.faq-item{border-bottom:1px solid var(--edge);padding:22px 0}
+.faq-q{font-family:var(--display);font-size:1.32rem;font-weight:600;letter-spacing:.015em;color:var(--paper);margin:0 0 8px;line-height:1.25}
+.faq-a{color:var(--copy);max-width:70ch;margin:0}
+details.faq-item{padding:10px 0}
+details.faq-item summary.faq-q{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;min-height:44px;margin:0;padding:12px 0}
+details.faq-item summary.faq-q::-webkit-details-marker{display:none}
+details.faq-item summary.faq-q::marker{content:""}
+details.faq-item summary.faq-q::after{content:"+";color:var(--acid);font-family:var(--mono);font-size:1.05rem;margin-left:auto}
+details.faq-item[open ] summary.faq-q::after{content:"–"}
+details.faq-item .faq-a{padding-bottom:14px}
+@media(min-width:769px){
+  details.faq-item{padding:22px 0}
+  details.faq-item summary.faq-q{pointer-events:none;cursor:default;min-height:0;padding:0;margin:0 0 8px}
+  details.faq-item summary.faq-q::after{content:""}
+  details.faq-item .faq-a{padding-bottom:0}
+}
