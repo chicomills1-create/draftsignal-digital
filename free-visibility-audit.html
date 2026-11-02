@@ -175,13 +175,15 @@
         <div>
           <span class="eyebrow">Request yours</span>
           <h2 style="font-size:1.5rem">Tell us where to look</h2>
-          <!-- Launch interim (2026-10-31): no form backend yet. On submit, the script at the
-               bottom of this page composes the visitor's answers into an email and opens
-               their own mail app addressed to info@draftsignaldigital.com — the visitor
-               presses send there. Nothing is claimed to be "received" until that email
-               arrives. A real form backend (CRM intake + confirmation email) is the
-               planned upgrade; replace this handler when it lands. -->
-          <form class="audit" id="audit-form" action="mailto:info@draftsignaldigital.com" method="post" enctype="text/plain">
+          <!-- Launch interim (2026-10-31; routing cured 2026-11-01): no form backend yet. On
+               submit, the script at the bottom of this page composes the visitor's answers
+               into an email and opens their own mail app addressed to info@apexgrideng.com
+               (the monitored Apex hub) — INTERIM routing while info@draftsignaldigital.com
+               is being created; swing the three door points back to the brand mailbox the
+               day it is proven by the intake E2E. The visitor presses send in their own app.
+               Nothing is claimed to be "received" until that email arrives. A real form
+               backend (CRM intake + confirmation email) is the planned upgrade. -->
+          <form class="audit" id="audit-form" action="mailto:info@apexgrideng.com" method="post" enctype="text/plain">
             <div>
               <label for="f-name">Your name</label>
               <input id="f-name" name="name" type="text" autocomplete="name" required>
@@ -215,7 +217,7 @@
               <textarea id="f-need" name="need" rows="4" placeholder="Invitations to bid, RFQ shortlists, distributor inquiries, estimate requests…"></textarea>
             </div>
             <button type="submit" class="btn">Request my free audit</button>
-            <p class="small">How sending works: this form opens your own email app with your audit request already written out, addressed to us — you just press send there. Prefer to skip the form? Email us directly at <a href="mailto:info@draftsignaldigital.com">info@draftsignaldigital.com</a> with your company name and website.</p>
+            <p class="small">How sending works: this form opens your own email app with your audit request already written out, addressed to us — you just press send there. Prefer to skip the form? Email us directly at <a href="mailto:info@apexgrideng.com">info@apexgrideng.com</a> with your company name and website.</p>
             <p class="small" id="audit-status" role="status" aria-live="polite" hidden></p>
             <p class="small">Delivered within two business days of a verified request. We review every request by hand before running it — if we can't do your market justice, we'll tell you that instead of sending a generic report.</p>
           </form>
@@ -281,6 +283,7 @@
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="free-visibility-audit.html">Free Visibility Audit</a></li>
           <li><a href="about-apex-family.html">About / Apex Family</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
         </ul>
       </div>
     </div>
@@ -314,7 +317,7 @@ document.getElementById('audit-form').addEventListener('submit', function (e) {
   var status = document.getElementById('audit-status');
   status.hidden = false;
   status.textContent = 'Your email app will open with your audit request ready to send — just press send there and it comes straight to us. If nothing opens, email us directly at info@draftsignaldigital.com.';
-  window.location.href = 'mailto:info@draftsignaldigital.com'
+  window.location.href = 'mailto:info@apexgrideng.com'
     + '?subject=' + encodeURIComponent(subject)
     + '&body=' + encodeURIComponent(lines.join('\n'));
 });
