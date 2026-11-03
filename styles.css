@@ -535,16 +535,18 @@ button[type=submit]{cursor:pointer;width:100%}
 }
 .foot-grid{display:grid;gap:32px;margin-bottom:38px}
 @media(min-width:760px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
-.site-foot h4{
+.site-foot h3{
+  font-family:var(--mono);
   font-size:.7rem;
+  font-weight:700;
   letter-spacing:.14em;
   text-transform:uppercase;
   color:var(--acid);
   margin-bottom:15px;
 }
 .site-foot ul{list-style:none}
-.site-foot ul li{margin-bottom:9px}
-.site-foot ul a{color:var(--copy)}
+.site-foot ul li{margin-bottom:3px}
+.site-foot ul a{color:var(--copy);display:inline-block;padding:3px 0}
 .site-foot ul a:hover{color:var(--acid)}
 .disclosure{
   border-top:1px solid var(--edge);
